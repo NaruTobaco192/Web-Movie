@@ -14,279 +14,306 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap.min.css"
     integrity="sha512-N415hCJJdJx+1UBfULt+i+ihvOn42V/kOjOpp1UTh4CZ70Hx5bDlKryWaqEKfY/8EYOu/C2MuyaluJryK1Lb5Q=="
     crossorigin="anonymous" />
-  <link rel="stylesheet" href="./Style.css" type="text/css">
+  <link rel="stylesheet" href="./Style/Style.css" type="text/css">
   <link rel="icon" href="./clapperboard.png" type="image/x-icon">
   <title>Xem Phim Online</title>
 </head>
 
 
-  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand-Home" href="#">
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand-Home" href="#">
 
-        <img src="./img/clapperboard.png" alt="ICON-LOGO" class="Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-3">
-            <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
-          </li>
+      <img src="./img/clapperboard.png" alt="ICON-LOGO" class="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-3">
+          <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
+        </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Thể loại
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Hành động</a></li>
-              <li><a class="dropdown-item" href="#">Hài hước</a></li>
-              <li><a class="dropdown-item" href="#">Kinh Dị</a></li>
-              <li><a class="dropdown-item" href="#">Siêu nhiên</a></li>
-              <li><a class="dropdown-item" href="#">Thường ngày</a></li>
-              <li><a class="dropdown-item" href="#">Tình cảm</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Thể loại
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Hành động</a></li>
+            <li><a class="dropdown-item" href="#">Hài hước</a></li>
+            <li><a class="dropdown-item" href="#">Kinh Dị</a></li>
+            <li><a class="dropdown-item" href="#">Siêu nhiên</a></li>
+            <li><a class="dropdown-item" href="#">Thường ngày</a></li>
+            <li><a class="dropdown-item" href="#">Tình cảm</a></li>
 
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Trạng thái
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Đang ra</a></li>
-              <li><a class="dropdown-item" href="#">Đã hoàn thành</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Trạng thái
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Đang ra</a></li>
+            <li><a class="dropdown-item" href="#">Đã hoàn thành</a></li>
 
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Năm
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            
-              <select name=slnamsinh style="width:150px">
-                <option>2000</option>
-            <script>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Năm
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <select name=slnamsinh style="width:150px">
+              <option>2000</option>
+              <script>
                 d = new Date();
-                for(i=2001;i<=d.getFullYear();i++){
-                    document.write("<option>" + i + "</option>");
+                for (i = 2001; i <= d.getFullYear(); i++) {
+                  document.write("<option>" + i + "</option>");
                 }     
-            </script>
+              </script>
             </select>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">
-        <img src="./img/search.png" alt="ICON-LOGO" class="Search">
-            
-          </button>
-        </form>
-      </div>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+        <img src="./img/search.png" alt="ICON-LOGO" class="Search" style="margin: 4px;">
+        <div class="open-modal">
+          <img src="./img/user.png" alt="ICON-User" class="User-icon" style="margin: 4px;">
+        </div>
+      </form>
     </div>
-  </nav>
-  <!-- Banner -->
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-
-    </div>
-    <div class="carousel-inner banner">
-      <div class="carousel-item active">
-        <img src="img/72706.jpg" class="d-block w-100 " alt="ảnh">
-        <div class="carousel-caption d-none d-md-block">
-          <h2>naruto shippuden</h2>
-          <button type="button" class="btn btn-outline-light btn-lg">
-            Xem thông tin phim
-          </button>
-          <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
-          
-
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/641968.jpg" class="d-block w-100" alt="ảnh">
-        <div class="carousel-caption d-none d-md-block">
-          <h2>Pokemon</h2>
-          <button type="button" class="btn btn-outline-light btn-lg">
-            Xem thông tin phim
-          </button>
-          <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/655516.jpg" class="d-block w-100" alt="ảnh">
-        <div class="carousel-caption d-none d-md-block">
-          <h2>Overlord</h2>
-          <button type="button" class="btn btn-outline-light btn-lg">
-            Xem thông tin phim
-          </button>
-          <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/606263.jpg" class="d-block w-100" alt="ảnh">
-        <div class="carousel-caption d-none d-md-block">
-          <h2>one piece
-          </h2>
-          <button type="button" class="btn btn-outline-light btn-lg">
-            Xem thông tin phim
-          </button>
-          <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
+</nav>
+<!-- Banner -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
 
-    <p></p>
-  
+  </div>
+  <div class="carousel-inner banner">
+    <div class="carousel-item active">
+      <img src="img/72706.jpg" class="d-block w-100 " alt="ảnh">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>naruto shippuden</h2>
+        <button type="button" class="btn btn-outline-light btn-lg">
+          Xem thông tin phim
+        </button>
+        <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
+
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/641968.jpg" class="d-block w-100" alt="ảnh">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Pokemon</h2>
+        <button type="button" class="btn btn-outline-light btn-lg">
+          Xem thông tin phim
+        </button>
+        <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/655516.jpg" class="d-block w-100" alt="ảnh">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Overlord</h2>
+        <button type="button" class="btn btn-outline-light btn-lg">
+          Xem thông tin phim
+        </button>
+        <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/606263.jpg" class="d-block w-100" alt="ảnh">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>one piece
+        </h2>
+        <button type="button" class="btn btn-outline-light btn-lg">
+          Xem thông tin phim
+        </button>
+        <button type="button" class="btn btn-primary btn-lg">Xem phim</button>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<p></p>
+
 <span>
   Phim đề cử
 </span>
-<hr style="color:aqua"></hr>
+<hr style="color:aqua">
+</hr>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/caubemattich4.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Cậu bé mất tích</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/caubemattich4.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Cậu bé mất tích</h5>
+        </div>
       </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/theboys.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">The Boys</h5>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/theboys.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">The Boys</h5>
+        </div>
       </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/MsMarvel.jpg" class="card-img-top " alt="...">
-      <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title" style="color: whitesmoke;">Ms Marvel</h5>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/MsMarvel.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Ms Marvel</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Jurassic World</h5>
+        </div>
       </div>
     </div>
   </div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Jurassic World</h5>
-      </div>
-    </div>
-  </div>
-  </div>
-&nbsp;
+  &nbsp;
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/doctorstrange.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Doctor Strange</h5>
-      </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/everything.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Everything ...at Once</h5>
-      </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/lovedeath.jpg" class="card-img-top " alt="...">
-      <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title" style="color: whitesmoke;">Love Death</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/doctorstrange.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Doctor Strange</h5>
+        </div>
       </div>
     </div>
-  </div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/phivutrieudo.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Phi vụ triệu đô</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/everything.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Everything ...at Once</h5>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/lovedeath.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Love Death</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/phivutrieudo.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Phi vụ triệu đô</h5>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
-  <p></p>
+<p></p>
 <span>
   Phim lẻ mới cập nhật
 </span>
-<hr style="color:aqua"></hr>
+<hr style="color:aqua">
+</hr>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/thefactory.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">The Factory</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/thefactory.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">The Factory</h5>
+        </div>
       </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/MontanaStory.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Montana Story</h5>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/MontanaStory.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Montana Story</h5>
+        </div>
       </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/Monstrous.jpg" class="card-img-top " alt="...">
-      <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title" style="color: whitesmoke;">Monstrous</h5>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/Monstrous.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Monstrous</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/Irresistible.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Irresistible</h5>
+        </div>
       </div>
     </div>
   </div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/Irresistible.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Irresistible</h5>
-      </div>
-    </div>
-  </div>
-  </div>
-&nbsp;
+  &nbsp;
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/Hotseat.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Hot Seat</h5>
-      </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/theblackphone.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">The Black Phone</h5>
-      </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/lightyear.jpg" class="card-img-top " alt="...">
-      <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title" style="color: whitesmoke;">Light Year</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/Hotseat.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Hot Seat</h5>
+        </div>
       </div>
     </div>
-  </div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/summerghost.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Summer Ghost</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/theblackphone.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">The Black Phone</h5>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/lightyear.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Light Year</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/summerghost.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Summer Ghost</h5>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -295,66 +322,79 @@
 <span>
   Phim bộ mới cập nhật
 </span>
-<hr style="color:aqua"></hr>
+<hr style="color:aqua">
+</hr>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/CafeMinamdang.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Café Minamdang</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/CafeMinamdang.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Café Minamdang</h5>
+        </div>
       </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/whyher.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Why Her?</h5>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/whyher.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Why Her?</h5>
+        </div>
       </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/jinxedatFirst.jpg" class="card-img-top " alt="...">
-      <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title" style="color: whitesmoke;">Jinxed At First</h5>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/jinxedatFirst.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Jinxed At First</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/Insider.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Insider</h5>
+        </div>
       </div>
     </div>
   </div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/Insider.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Insider</h5>
-      </div>
-    </div>
-  </div>
-  </div>
-&nbsp;
+  &nbsp;
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/LycorisRecoil.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Lycoris Recoil</h5>
-      </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/ParallelWorldPharmacy.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Parallel World Pharmacy</h5>
-      </div>
-    </div></div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/Farzar.jpg" class="card-img-top " alt="...">
-      <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title" style="color: whitesmoke;">Farzar</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/LycorisRecoil.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Lycoris Recoil</h5>
+        </div>
       </div>
     </div>
-  </div>
-    <div class="col-md-3 cursorhover"><div class="card" style="width: 17rem;">
-      <img src="./img/VinlandSaga.jpg" class="card-img-top " alt="...">
-      <div class="card-body"style="background-color:rgb(22, 21, 21) ;">
-        <h5 class="card-title"style="color: whitesmoke;">Vinland Saga</h5>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/ParallelWorldPharmacy.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Parallel World Pharmacy</h5>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/Farzar.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Farzar</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 cursorhover">
+      <div class="card" style="width: 17rem;">
+        <img src="./img/VinlandSaga.jpg" class="card-img-top " alt="...">
+        <div class="card-body" style="background-color:rgb(22, 21, 21) ;">
+          <h5 class="card-title" style="color: whitesmoke;">Vinland Saga</h5>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -363,81 +403,141 @@
 
 <p></p>
 <p>&nbsp;</p>
-<hr style="color:aqua"></hr>
+<hr style="color:aqua">
+</hr>
 
 <p style="color:white;margin-left: 72px;">
-  Phim chất lượng cao online của <a style="color:blue;" class="cursorhover">XemPhim</a> khác gì so với các trang phim khác?
-  <ul style="margin-left: 100px;">
-    <li style="color:#b5b5b5;">Là phim bluray (reencoded), có độ phân giải thấp nhất là Full HD (1080p), trong khi hầu hết các trang phim khác chỉ có tới độ phân giải HD (720p) là cao nhất</li>
-    <li style="color:#b5b5b5;">Chất lượng cao, lượng dữ liệu trên giây (bitrate) gấp từ 5 - 10 lần phim online thông thường - đây là yếu tố quyết định độ nét của phim (thậm chí còn quan trọng hơn độ phân giải)
-    </li>
-    <li style="color:#b5b5b5;">Âm thanh 5.1 (6 channel) thay vì stereo (2 channel) như các trang phim khác (kể cả Youtube)
-    </li>
-    <li style="color:#b5b5b5;">Phù hợp để xem trên màn hình TV, máy tính, laptop có độ phân giải cao
-    </li>
-    <li style="color:#b5b5b5;">Nếu không hài lòng với phụ đề có sẵn, bạn có thể tự upload phụ đề của riêng mình để xem online
-    </li>
-    <li style="color:#b5b5b5;">Có lựa chọn hiện phụ đề song ngữ (tức hiện đồng thời cả tiếng Anh & tiếng Việt), phù hợp với những người muốn học tiếng Anh qua phụ đề phim
-    </li>
-  </ul>
+  Phim chất lượng cao online của <a style="color:blue;" class="cursorhover">XemPhim</a> khác gì so với các trang phim
+  khác?
+<ul style="margin-left: 100px;">
+  <li style="color:#b5b5b5;">Là phim bluray (reencoded), có độ phân giải thấp nhất là Full HD (1080p), trong khi hầu hết
+    các trang phim khác chỉ có tới độ phân giải HD (720p) là cao nhất</li>
+  <li style="color:#b5b5b5;">Chất lượng cao, lượng dữ liệu trên giây (bitrate) gấp từ 5 - 10 lần phim online thông
+    thường - đây là yếu tố quyết định độ nét của phim (thậm chí còn quan trọng hơn độ phân giải)
+  </li>
+  <li style="color:#b5b5b5;">Âm thanh 5.1 (6 channel) thay vì stereo (2 channel) như các trang phim khác (kể cả Youtube)
+  </li>
+  <li style="color:#b5b5b5;">Phù hợp để xem trên màn hình TV, máy tính, laptop có độ phân giải cao
+  </li>
+  <li style="color:#b5b5b5;">Nếu không hài lòng với phụ đề có sẵn, bạn có thể tự upload phụ đề của riêng mình để xem
+    online
+  </li>
+  <li style="color:#b5b5b5;">Có lựa chọn hiện phụ đề song ngữ (tức hiện đồng thời cả tiếng Anh & tiếng Việt), phù hợp
+    với những người muốn học tiếng Anh qua phụ đề phim
+  </li>
+</ul>
 </p>
 <!-- Footer -->
-<div class="container-fluid padding">	
-	<div class="row text-center padding">
-		
-		<div class="col-12 social padding">
-			<a href="#"><i class="fab fa-facebook"></i></a>
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<a href="#"><i class="fab fa-google-plus-g"></i></a>
-			<a href="#"><i class="fab fa-instagram"></i></a>
-			<a href="#"><i class="fab fa-youtube"></i></a>
-		</div>
-	</div>
-</div>	
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+
+    <div class="col-12 social padding">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
 <footer>
-	<div class="container-fluid padding">	
-		<div class="row text-center">
+  <div class="container-fluid padding">
+    <div class="row text-center">
       <p>&nbsp;&nbsp;</p>
-			<div class="col-md-4">
-      <p>&nbsp;&nbsp;</p>
+      <div class="col-md-4">
+        <p>&nbsp;&nbsp;</p>
 
-				<img src="./img/clapperboard.png" class="Logo">
-				<hr class="light">
-				<p style="color:#b5b5b5;">111-222-3333</p>
-				<p style="color:#b5b5b5;">mymail@gmail.com</p>
-				<p style="color:#b5b5b5;">Bach Mai street, Hanoi, Vietnam</p>
-			</div>
-			
-        <div class="col-md-4">				
-          <hr class="light">
-          <h3 style="color:#b5b5b5;" >Contact Us</h3>
-      <p>&nbsp;&nbsp;</p>
+        <img src="./img/clapperboard.png" class="Logo">
+        <hr class="light">
+        <p style="color:#b5b5b5;">111-222-3333</p>
+        <p style="color:#b5b5b5;">mymail@gmail.com</p>
+        <p style="color:#b5b5b5;">Bach Mai street, Hanoi, Vietnam</p>
+      </div>
 
-          <img src="./img/facebook.png" style="width:50px;margin: 12px;" class="cursorhover">
-          <img src="./img/youtube.png" style="width:50px;margin: 12px;" class="cursorhover">
-          <img src="./img/instagram.png"style="width:50px;margin: 12px;" class="cursorhover">
-          <img src="./img/twitter.png"style="width:50px;margin: 12px;" class="cursorhover">
-          <hr class="light">
-          
-        </div>
-       <div class="col-md-4">
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
+      <div class="col-md-4">
+        <hr class="light">
+        <h3 style="color:#b5b5b5;">Contact Us</h3>
+        <p>&nbsp;&nbsp;</p>
 
-          <h4 style="color:#b5b5b5;" >
-            © 2022 All Rights Reserved •
-          </h4>
-       </div>
+        <img src="./img/facebook.png" style="width:50px;margin: 12px;" class="cursorhover">
+        <img src="./img/youtube.png" style="width:50px;margin: 12px;" class="cursorhover">
+        <img src="./img/instagram.png" style="width:50px;margin: 12px;" class="cursorhover">
+        <img src="./img/twitter.png" style="width:50px;margin: 12px;" class="cursorhover">
+        <hr class="light">
 
       </div>
-			<div class="col-12" style="color:#b5b5b5;">
-				<hr class="light-100">
-				<h5>&copy; XemPhim</h5>
-			</div>
-		</div>
-	</div>
+      <div class="col-md-4">
+        <p>&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;</p>
+
+        <h4 style="color:#b5b5b5;">
+          © 2022 All Rights Reserved •
+        </h4>
+      </div>
+
+    </div>
+    <div class="col-12" style="color:#b5b5b5;">
+      <hr class="light-100">
+      <h5>&copy; XemPhim</h5>
+    </div>
+  </div>
+  </div>
 </footer>
+<div class="modal js-modal">
+  <div class="modal-container js-modal-container">
+
+    <div class="modal-close js-modal-close">
+      <img src="./img/close.png" alt="close" style="width:16px">
+    </div>
+
+    <header class="modal-header">
+      <img src="./img/user.png" style="width:22px;margin-right: 4px;">
+      Đăng nhập
+    </header>
+
+    <div class="modal-body">
+      <label for="ticket-quantity" class="modal-label">
+        <img src="./img/user2.png" style="width:16px">
+        Tài Khoản
+      </label>
+      <input id="ticket-quantity" type="text" class="modal-input" placeholder="Nhập tài khoản">
+
+      <label for="ticket-email" class="modal-label">
+        <img src="./img/padlock.png" style="width:16px">
+        Mật Khẩu
+      </label>
+      <input id="ticket-email" type="text" class="modal-input" placeholder="Nhập mật khẩu">
+      <button id="login">
+        Đăng nhập
+      </button>
+    </div>
+    <footer class="modal-footer">
+      <p class="modal-help">Bạn chưa có tài khoản?<a href="Register.html"> Đăng ký</a></p>
+    </footer>
+  </div>
+</div>
+<script>
+  const buyBtns = document.querySelectorAll('.open-modal')
+  const modal = document.querySelector('.js-modal')
+  const modalClose = document.querySelector('.js-modal-close')
+  const modalContainer = document.querySelector('.js-modal-container')
+  function showModal() {
+    modal.classList.add('open');
+  }
+  function removeModal() {
+    modal.classList.remove('open');
+  }
+  for (const buyBtn of buyBtns) {
+    buyBtn.addEventListener('click', showModal)
+  }
+  modalClose.addEventListener('click', removeModal)
+  modal.addEventListener('click', removeModal)
+  modalContainer.addEventListener('click', function (event) {
+    event.stopPropagation()
+  })
+
+</script>
 </body>
 
 </html>

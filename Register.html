@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký tài khoản</title>
+  <link rel="Stylesheet" href="./Style/StyleRegister.css" type="text/css">
+
+</head>
+
+<body>
+  <form action="" name="f">
+    <br class="container">
+    <h1>Đăng ký tài khoản </h1>
+
+    <hr>
+    <label for="email"><b>Nhập tài khoản</b></label>
+    <input type="text" name="email" required>
+    <label for="email"><b>Nhập mật khẩu</b></label>
+    <input type="text" name="pass" required>
+    <label for="email"><b>Nhập lại mật khẩu</b></label>
+    <input type="text" name="pass2" required>
+    <br>
+    <div class="Edit">
+      <button type="submit" class="editbtn" onclick="check()">Đăng ký</button>
+    </div>
+    </div>
+  </form>
+
+  <script>
+    check = () => {
+      with (document) {
+        if (f.email.value == "") {
+          alert("Bạn chưa nhập email !")
+          f.email.focus();
+          return false;
+        }
+        if (f.pass.value == "") {
+          alert("Bạn chưa nhập mật khẩu !")
+          f.pass.focus();
+          return false;
+        } if (f.pass2.value == "") {
+          alert("Bạn chưa nhập mật khẩu 2 !")
+          f.pass2.focus();
+          return false;
+        }
+        if (f.pass.value !== f.pass2.value) {
+          alert("Mật khẩu 2 không giống mật khẩu 1")
+          f.pass2.focus();
+          return false;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
